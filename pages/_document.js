@@ -18,7 +18,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script src="https://www.googletagmanager.com/gtag/js?id=G-6JVZMZE949" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-6JVZMZE949"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
