@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -19,19 +18,18 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-6JVZMZE949"
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
+          <script src="https://www.googletagmanager.com/gtag/js?id=G-6JVZMZE949" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
               gtag('config', 'G-6JVZMZE949');
-            `}
-          </Script>
+            `
+            }}
+          />
           <meta name="robots" content="follow, index" />
           <meta name="description" content={meta.description} />
           <meta property="og:site_name" content={meta.title} />
