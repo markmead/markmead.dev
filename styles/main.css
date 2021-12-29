@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.callout code,
 .callout strong {
-  @apply text-orange-900 font-bold;
+  @apply font-bold text-orange-900;
 }
 
 .callout a {
-  @apply text-blue-500 font-medium;
+  @apply font-medium text-blue-500;
 }
 
 .callout p {
