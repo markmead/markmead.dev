@@ -2,6 +2,7 @@ const YEAR = new Date().getFullYear()
 
 export default {
   titleSuffix: ' - Mark Mead',
+  darkMode: true,
 
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>

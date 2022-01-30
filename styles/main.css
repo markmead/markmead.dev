@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 .callout code,
-.callout strong {
+.callout strong,
+.dark .callout code,
+.dark .callout strong {
   @apply font-semibold text-inherit;
 }
 
@@ -15,11 +17,10 @@
   @apply mt-1;
 }
 
-.nav-line span.nav-link,
-.post-item .post-item-date {
-  @apply text-gray-400;
+.light .post-item .post-item-date {
+  @apply text-gray-600;
 }
 
-.post-item .post-item-desc {
-  @apply text-gray-600;
+.dark .meta .tag {
+  @apply text-gray-400 bg-gray-700 hover:text-white;
 }
