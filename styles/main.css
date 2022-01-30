@@ -4,21 +4,13 @@
 
 .callout code,
 .callout strong {
-  color: inherit;
-  font-weight: 600;
+  @apply font-semibold text-inherit;
 }
 
 .callout p {
-  margin: 0;
+  @apply m-0;
 }
 
 .callout div > p + p {
-  margin-top: 0.25rem;
-}
-
-@media screen and (max-width: 480px) {
-  article {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-  }
+  @apply mt-1;
 }
