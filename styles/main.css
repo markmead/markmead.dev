@@ -14,3 +14,12 @@
 .callout div > p + p {
   @apply mt-1;
 }
+
+.nav-line span.nav-link,
+.post-item .post-item-date {
+  @apply text-gray-400;
+}
+
+.post-item .post-item-desc {
+  @apply text-gray-600;
+}
