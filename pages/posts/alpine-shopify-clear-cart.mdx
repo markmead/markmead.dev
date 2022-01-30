@@ -20,10 +20,11 @@ This means that we can create a source of truth for particular state management,
 
 Let's create a new Alpine JS store called "cart" that we will place in either `assets/theme.js` or `layouts/theme.liquid`.
 
-<Callout emoji="💡">
-  If you're using a JavaScript file then you will need to import and start Alpine JS.
+<Callout>
+  When using a JavaScript file then you will need to import and start Alpine JS.
 
-  [Using Alpine JS in a JavaScript File](https://alpinejs.dev/essentials/installation#as-a-module)
+[Using Alpine JS in a JavaScript File](https://alpinejs.dev/essentials/installation#as-a-module)
+
 </Callout>
 
 Here's our Alpine JS store for the cart.
@@ -70,7 +71,7 @@ The last part is the HTML, thankfully Alpine JS exposes the store in a `$store` 
 </button>
 ```
 
-<Callout emoji="🙋">
+<Callout theme="info">
   If the clear cart button is within a form remember to include `type="button"`
   to stop the form from being submitted on click.
 </Callout>

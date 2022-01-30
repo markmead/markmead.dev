@@ -7,12 +7,10 @@ class MyDocument extends Document {
   }
 
   render() {
-    const meta = {
-      title: 'Shopify Developer Essex | Mark Mead',
-      description:
-        'Building ecommerce websites with Shopify, powered by Tailwind CSS, Alpine JS and Ruby on Rails.'
-      // image:
-      //   'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
+    const META = {
+      url: 'https://hyperui.dev/',
+      title: 'Web Developer - Mark Mead',
+      description: 'Building websites.'
     }
 
     return (
@@ -33,18 +31,20 @@ class MyDocument extends Document {
             `
             }}
           />
-          <meta name="robots" content="follow, index" />
-          <meta name="description" content={meta.description} />
-          <meta property="og:site_name" content={meta.title} />
-          <meta property="og:description" content={meta.description} />
-          <meta property="og:title" content={meta.title} />
-          {/* <meta property="og:image" content={meta.image} /> */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@yourname" />
-          <meta name="twitter:title" content={meta.title} />
-          <meta name="twitter:description" content={meta.description} />
-          {/* <meta name="twitter:image" content={meta.image} /> */}
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={META.url} />
+          <meta property="og:title" content={META.title} />
+          <meta property="og:description" content={META.description} />
+          <meta property="og:image" content={`${META.url}og.png`} />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content={META.url} />
+          <meta property="twitter:title" content={META.title} />
+          <meta property="twitter:description" content={META.description} />
+          <meta property="twitter:image" content={`${META.url}og.png`} />
         </Head>
+
         <body>
           <Main />
           <NextScript />
