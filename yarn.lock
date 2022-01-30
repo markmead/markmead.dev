@@ -1977,7 +1977,7 @@ next@latest:
     "@next/swc-win32-ia32-msvc" "12.0.9"
     "@next/swc-win32-x64-msvc" "12.0.9"
 
-nextra-theme-blog@2.0.0:
+nextra-theme-blog@2.0.0-beta.5:
   version "2.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/nextra-theme-blog/-/nextra-theme-blog-2.0.0-beta.5.tgz#024b776feb6aaee115fa7ae1cc02fed9d6b57482"
   integrity sha512-cF3tmaKNxFAXrGQO5725QvUrQPSvnwQzvm7Wl4U5EhLZ9ZBilxk4jS2SOKz1vXR/6mCykJsEcZONEHGupytkeQ==
@@ -1989,7 +1989,7 @@ nextra-theme-blog@2.0.0:
     prism-react-renderer "^1.1.1"
     react-cusdis "^2.0.1"
 
-nextra@2.0.0:
+nextra@2.0.0-beta.5:
   version "2.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/nextra/-/nextra-2.0.0-beta.5.tgz#37a5947af2c4cc3620ff1fe939971ebb9fcb5041"
   integrity sha512-RYhD/wMfTFXzshqe1GOovQR9n0YsvgW/TLsUzu0arTix+A9Eugl/urFVvtGFRahOWxWFOS9/YgYKjp4nRIuMhw==
