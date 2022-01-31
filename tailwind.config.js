@@ -1,15 +1,7 @@
-let colors = require('tailwindcss/colors')
-
 module.exports = {
-  mode: 'jit',
-  purge: ['./components/*.js'],
-  darkMode: false,
+  content: ['./components/*.js'],
   theme: {
-    extend: {
-      colors: {
-        orange: colors.orange
-      }
-    }
+    extend: {}
   },
   variants: {
     extend: {}
