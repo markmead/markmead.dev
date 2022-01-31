@@ -21,6 +21,10 @@
   @apply text-gray-600;
 }
 
+.meta .tag {
+  @apply font-normal;
+}
+
 .dark .meta .tag {
   @apply text-gray-400 bg-gray-700 hover:text-white;
 }
