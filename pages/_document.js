@@ -14,7 +14,7 @@ class MyDocument extends Document {
     }
 
     return (
-      <Html lang="en">
+      <Html lang="en" className="dark">
         <Head>
           <script
             async
