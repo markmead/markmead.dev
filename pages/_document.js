@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
+
     return { ...initialProps }
   }
 
@@ -10,11 +11,11 @@ class MyDocument extends Document {
     const META = {
       url: 'https://hyperui.dev/',
       title: 'Web Developer - Mark Mead',
-      description: 'Building websites.'
+      description: 'Building websites with the TALL stack and Next JS.'
     }
 
     return (
-      <Html lang="en" className="dark">
+      <Html lang="en">
         <Head>
           <script
             async
