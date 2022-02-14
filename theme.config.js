@@ -4,7 +4,7 @@ export default {
   titleSuffix: ' - Mark Mead',
 
   footer: (
-    <small class="mt-12 block">
+    <small className="block mt-12">
       <time>{YEAR}</time> © Mark Mead.
     </small>
   )
