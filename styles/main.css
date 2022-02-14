@@ -6,6 +6,10 @@ html {
   @apply scroll-smooth;
 }
 
+article {
+  @apply py-12 sm:py-16;
+}
+
 .prose .prose-no-underline {
   @apply no-underline;
 }

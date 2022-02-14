@@ -4,16 +4,8 @@ export default {
   titleSuffix: ' - Mark Mead',
 
   footer: (
-    <small style={{ display: 'block', marginTop: '8rem' }}>
+    <small class="mt-12 block">
       <time>{YEAR}</time> © Mark Mead.
-      <style jsx>{`
-        @media screen and (max-width: 480px) {
-          article {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
-          }
-        }
-      `}</style>
     </small>
   )
 }
