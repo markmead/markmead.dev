@@ -31,7 +31,7 @@ const Contact = () => {
     setSent(status === 201)
     setError(status === 422)
 
-    if (sent) {
+    if (status === 201) {
       setTitle('')
       setEmail('')
       setBody('')
