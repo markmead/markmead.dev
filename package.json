@@ -16,7 +16,10 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
     "autoprefixer": "^10.4.2",
+    "gh-contact-form": "^1.0.4",
+    "octokit": "^1.7.1",
     "postcss": "^8.4.5",
     "slugify": "^1.6.5",
     "tailwindcss": "^3.0.18"
