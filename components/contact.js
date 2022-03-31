@@ -12,7 +12,7 @@ const Contact = () => {
 
   const contactForm = new GhContactForm(
     new Octokit({
-      auth: process.env.GITHUB_ACCESS_TOKEN
+      auth: process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN
     })
   )
 
