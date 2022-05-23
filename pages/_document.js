@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     const meta = {
-      url: 'https://hyperui.dev/',
+      url: 'https://markmead.dev/',
       title: 'Web Developer - Mark Mead',
       description: 'Building websites with the TALL stack and Next JS.'
     }
@@ -33,24 +33,22 @@ class MyDocument extends Document {
             }}
           />
 
-          <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
-
           <meta property="og:type" content="website" />
           <meta property="og:url" content={meta.url} />
           <meta property="og:title" content={meta.title} />
           <meta property="og:description" content={meta.description} />
-          <meta property="og:image" content={`${meta.url}og.png`} />
-
+          <meta property="og:image" content={`${meta.url}social.jpg`} />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content={meta.url} />
           <meta property="twitter:title" content={meta.title} />
           <meta property="twitter:description" content={meta.description} />
-          <meta property="twitter:image" content={`${meta.url}og.png`} />
+          <meta property="twitter:image" content={`${meta.url}social.jpg`} />
         </Head>
 
         <body>
           <Main />
+
           <NextScript />
         </body>
       </Html>
