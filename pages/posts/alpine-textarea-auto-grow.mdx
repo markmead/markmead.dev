@@ -6,9 +6,9 @@ tag: alpinejs, javascript
 author: Mark Mead
 ---
 
-There are a few approaches that you can take when you are creating a `<textarea>` that autogrows with the users input, but how can we recreate these in Alpine JS?
+There are a few approaches that you can take when creating a `<textarea>` that autogrows with the users input, but how can we recreate these with Alpine JS with clean, reusable code?
 
-We could take the common JavaScript approach and translate that to Alpine JS like this.
+Let's take the standard JavaScript approach and translate it to Alpine JS.
 
 ```HTML
 <textarea
@@ -23,7 +23,7 @@ We could take the common JavaScript approach and translate that to Alpine JS lik
 ></textarea>
 ```
 
-However, this approach has its drawbacks, the most notable being all this extra complexity and bloat added to HTML. There's an easy fix for that tho, we can extract the logic to a reusable Alpine JS `x-data` context.
+However, this approach has its downsides, the most notable being all the extra complexity and bloat added to HTML. However, there's an easy fix for that, we can extract the logic to a reusable Alpine JS `x-data` context.
 
 ```HTML
 <textarea x-data="grow"></textarea>
@@ -44,11 +44,13 @@ document.addEventListener("alpine:init", () => {
 </script>
 ```
 
-Now we can add `x-data="grow"` to any `<textarea>` in the codebase and keep the `Alpine.data("grow")` in the layout file within a `<script>` (as shown above) or even in a JavaScript file.
+Now we can add `x-data="grow"` to any `<textarea>` and keep the `Alpine.data("grow")` in the layout file within a `<script>` (as shown above) or in a JavaScript file.
 
-There is one more solution... We could use the Alpine JS plugin, [Alpine JS Textarea Autogrow](https://github.com/markmead/alpinejs-textarea-autogrow).
+There is one more solution...
 
-With this plugin we can use an Alpine JS directive `x-grow` to create the same autogrow functionality/effect that can be achieved in the previous examples.
+We could use the Alpine JS plugin, [Alpine JS Textarea Autogrow](https://github.com/markmead/alpinejs-textarea-autogrow). Which I recently created 🥳
+
+With this plugin we can use an Alpine JS directive `x-grow` to create the same autogrow functionality/effect that is achieved in the previous examples.
 
 ```HTML
 <textarea x-data x-grow></textarea>
@@ -58,4 +60,6 @@ With this plugin we can use an Alpine JS directive `x-grow` to create the same a
 
 Before we end this blog post I need to make a PSA...
 
-Replacing `<textarea>` with `<span contenteditable>` is not a solution for this functionality, please don't do that. Seems obvious right? I've seen a developer with 20+ years experience do this... Remember, we all have off days.
+Replacing `<textarea>` with `<span contenteditable>` is not a solution for this functionality, please don't do that.
+
+Seems obvious right? I've seen a developer with 20+ years of experience do this... Remember, we all have off days.
