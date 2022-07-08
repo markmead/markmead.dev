@@ -29,7 +29,7 @@ Let's create a new Alpine JS store called "cart" that we will place in either `a
 
 Here's our Alpine JS store for the cart.
 
-```
+```js
 Alpine.store('cart', {
   data: null,
 
@@ -61,21 +61,15 @@ There's another approach to doing this with `response.ok && this.cart = null` bu
 
 The last part is the HTML, thankfully Alpine JS exposes the store in a `$store` variable. Therefore, we can create a button that clears the cart with the following code.
 
+```html
+<button x-data type="button" @click="$store.cart.clearCart">Clear Cart</button>
 ```
-<button
-  x-data
-  type="button"
-  @click="$store.cart.clearCart"
->
-  Clear Cart
-</button>
-```
+
+And that's that. You can now take `$store.cart.clearCart` and place that where you need to clear the cart in your Shopify store.
 
 <Callout>
   If the clear cart button is within a form remember to include `type="button"`
   to stop the form from being submitted on click.
 </Callout>
-
-And that's that. You can now take `$store.cart.clearCart` and place that where you need to clear the cart in your Shopify store.
 
 If you are using this on the cart page or within a cart popup/drawer then you'll want to handle the UI to show the user that the cart has been emptied.
