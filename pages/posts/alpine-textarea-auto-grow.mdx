@@ -12,7 +12,7 @@ At some point in your development career you will most likely be asked to make a
 
 There are a few approaches you can take when creating this functionality but the most common is a JavaScript function similair to this.
 
-```
+```js
 function textareaAutogrow() {
   let el = event.currentTarget
 
@@ -29,7 +29,7 @@ Let's start with a solution that uses the same code as the JavaScript example, b
 
 ## Basic Alpine JS Example
 
-```
+```html
 <textarea
   x-data="{
     resize: () => {
@@ -64,31 +64,36 @@ No. It's not DRY and that's not something I'd want to be using, especially in HT
 
 Let's take the logic we just wrote and extract it into it's own Alpine JS data context function. Here's what that would look like.
 
-```
+```html
 <textarea x-data="grow"></textarea>
 ```
 
-```
-document.addEventListener("alpine:init", () => {
-  Alpine.data("grow", () => ({
+And the Alpine JS directive.
+
+```js
+document.addEventListener('alpine:init', () => {
+  Alpine.data('grow', () => ({
     init() {
-      this.resize();
-      this.$el.addEventListener("input", () => this.resize());
+      this.resize()
+      this.$el.addEventListener('input', () => this.resize())
     },
     resize() {
-      this.$el.style.height = "auto";
-      this.$el.style.height = `${this.$el.scrollHeight}px`;
+      this.$el.style.height = 'auto'
+      this.$el.style.height = `${this.$el.scrollHeight}px`
     }
-  }));
-});
+  }))
+})
 ```
 
 This looks much better! 🚀
 
 Handling it with this approach allows us to add `x-data="grow"` without having to write the functionality over and over again. However... Let's take the following example.
 
-```
-<textarea x-data="{ valid: false, grow }" :class="{ 'border-green-500': valid }"></textarea>
+```html
+<textarea
+  x-data="{ valid: false, grow }"
+  :class="{ 'border-green-500': valid }"
+></textarea>
 ```
 
 Here we have a `valid: false` which handles adding/removing a CSS class.
@@ -105,7 +110,7 @@ I've created an Alpine JS plugin called [Alpine JS Textarea Autogrow](https://gi
 
 What this means is we can add this functionality like this.
 
-```
+```html
 <textarea x-data x-grow></textarea>
 ```
 
