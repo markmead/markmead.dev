@@ -5,7 +5,7 @@ const matter = require('gray-matter')
 
 async function generate() {
   const feed = new RSS({
-    title: 'Shu Ding',
+    title: 'Mark Mead',
     site_url: 'https://www.markmead.dev',
     feed_url: 'https://www.markmead.dev/feed.xml'
   })
