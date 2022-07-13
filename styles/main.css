@@ -40,3 +40,8 @@ article {
 .dark .meta .tag {
   @apply text-gray-400 bg-gray-700 hover:text-white;
 }
+
+
+.nav-line + ul {
+  @apply pl-0;
+}
