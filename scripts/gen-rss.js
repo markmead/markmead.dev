@@ -19,6 +19,7 @@ async function generate() {
       const content = await fs.readFile(
         path.join(__dirname, '..', 'pages', 'posts', name)
       )
+
       const frontmatter = matter(content)
 
       feed.item({

@@ -21,6 +21,7 @@ const Callout = ({ theme, children }) => {
   }
 
   const emoji = theme ? emojis[theme] : emojis.base
+
   const color = Object.values(theme ? colors[theme] : colors.base).join(' ')
 
   return (

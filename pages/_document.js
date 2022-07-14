@@ -8,12 +8,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    const meta = {
-      url: 'https://markmead.dev/',
-      title: 'Web Developer - Mark Mead',
-      description: 'Building websites with the TALL stack and Next JS.'
-    }
-
     return (
       <Html lang="en">
         <Head>

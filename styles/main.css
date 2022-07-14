@@ -14,13 +14,8 @@ article pre {
   @apply my-[1.5em];
 }
 
-.callout code,
-.callout strong {
-  @apply !font-semibold !text-inherit;
-}
-
-.light .post-item .post-item-date {
-  @apply text-gray-600;
+.nav-line + ul {
+  @apply pl-0;
 }
 
 .meta .tag {
@@ -31,6 +26,11 @@ article pre {
   @apply text-gray-400 bg-gray-700 hover:text-white;
 }
 
-.nav-line + ul {
-  @apply pl-0;
+.light .post-item .post-item-date {
+  @apply text-gray-600;
+}
+
+.callout code,
+.callout strong {
+  @apply !font-semibold !text-inherit;
 }
