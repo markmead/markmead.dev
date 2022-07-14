@@ -6,7 +6,7 @@ const Anchor = ({ title, tag: Tag = 'h2' }) => {
   })
 
   return (
-    <a className="relative prose-no-underline" href={`#${id}`}>
+    <a className="relative no-underline" href={`#${id}`}>
       <Tag className="group" id={id}>
         <span className="absolute opacity-0 -left-6 group-hover:opacity-75">
           #

@@ -24,7 +24,9 @@ const Callout = ({ theme, children }) => {
   const color = Object.values(theme ? colors[theme] : colors.base).join(' ')
 
   return (
-    <div className={`flex rounded-lg border callout my-[1.5em] ${color}`}>
+    <div
+      className={`flex rounded-lg border callout my-[1.5em] not-prose ${color}`}
+    >
       <span className="py-2 pl-3 pr-2 select-none lg:text-xl" role="img">
         {emoji}
       </span>

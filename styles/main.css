@@ -10,23 +10,13 @@ article {
   @apply py-12 sm:py-16;
 }
 
-.prose .prose-no-underline {
-  @apply no-underline;
+article pre {
+  @apply my-[1.5em];
 }
 
 .callout code,
-.callout strong,
-.dark .callout code,
-.dark .callout strong {
-  @apply font-semibold text-inherit;
-}
-
-.callout p {
-  @apply m-0;
-}
-
-.callout div > p + p {
-  @apply mt-1;
+.callout strong {
+  @apply !font-semibold !text-inherit;
 }
 
 .light .post-item .post-item-date {
@@ -40,7 +30,6 @@ article {
 .dark .meta .tag {
   @apply text-gray-400 bg-gray-700 hover:text-white;
 }
-
 
 .nav-line + ul {
   @apply pl-0;
